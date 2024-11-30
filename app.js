@@ -1,7 +1,5 @@
-const btn = document.querySelector(".js-btn");
-
-btn.addEventListener("click", async () => {
-  const inputWord = document.querySelector(".word-input").value;
+async function generateWord (){
+  const inputWord = document.querySelector(".word-input").value || 'hello';
 
   if (!inputWord) {
     alert("Enter a word to search");
@@ -69,4 +67,6 @@ btn.addEventListener("click", async () => {
   } catch (error) {
     alert(error.message);
   }
-});
+};
+
+generateWord();
